@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: configclient
+#  devtools:
+#      restart:
+#        enabled: false # 关闭自动重启
+  cloud:
+    config:
+      uri: http://47.93.204.1:8009/config_server
+      profile: ${test.value} # dev,mysql
+      # 使用java -jar target/spring-boot-demo-0.0.1-SNAPSHOT.jar --test.value=test
+      label: master
+      username: config
+      password: config
+  datasource:
+    url: ${mysql.url}
+    username: ${mysql.username}
+    password: ${mysql.password}
+  jpa:
+    show-sql: true
+#    generate-ddl: true
+#    hibernate:
+#      ddl-auto: update
