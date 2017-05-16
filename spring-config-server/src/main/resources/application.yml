@@ -11,8 +11,8 @@ spring:
       server:
         git:
           uri: https://github.com/HuAngchping/config-repo.git
-          username: chaoshcp@gmail.com
-          password: hcp1101@!#
+          username: chap@gmail.com
+          password: 1101
           search-paths: configclient #myconfig/dev,myconfig/test,myconfig/prod 搜索 git地址https://github.com/HuAngchping/+myconfig/dev
         #native:
           #search-locations: 加载本地配置 /User/huang/Documents/里的配置文件

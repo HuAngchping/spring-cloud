@@ -6,7 +6,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://47.93.204.1:8761/eureka
-      
+
 management:
   security:
     enabled: false
