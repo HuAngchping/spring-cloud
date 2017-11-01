@@ -9,9 +9,9 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://47.93.204.1:8761/eureka
+      defaultZone: http://127.0.0.1:8761/eureka
   instance:
-    instance-id: ${spring.application.name}:${server.port}:${random.value} #实例id
+    instance-id: ${spring.application.name}:${server.port}:${random.value} # 在注册中心显示实例id
     # hostname: 47.93.204.1
     # ip-address: 47.93.204.1 # 阿里云上部署使用
     # prefer-ip-address: true # 显示ip地址

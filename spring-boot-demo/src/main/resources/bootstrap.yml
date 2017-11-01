@@ -6,7 +6,7 @@ spring:
 #        enabled: false # 关闭自动重启
   cloud:
     config:
-      uri: http://47.93.204.1:8009/config_server
+      uri: http://127.0.0.1:8009/config_server
       profile: ${test.value} # dev,mysql
       # 使用java -jar target/spring-boot-demo-0.0.1-SNAPSHOT.jar --test.value=test
       label: master

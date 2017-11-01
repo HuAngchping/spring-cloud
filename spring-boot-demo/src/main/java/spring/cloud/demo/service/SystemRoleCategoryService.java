@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import spring.cloud.demo.controllers.domain.SystemRoleCategoryDomain;
 import spring.cloud.demo.repositories.SystemRoleCategoryRepository;
@@ -34,6 +36,11 @@ public class SystemRoleCategoryService {
     roleCategory.setModifiedTime(date);
     roleCategory.setCreateTime(date);
     SystemRoleCategory systemRoleCategory = roleCategoryRepository.save(roleCategory);
+
+    List features = Arrays.asList("Lambdas", "Default Method", "Stream API",
+            "Date and Time API");
+    features.forEach(n -> System.out.println(n));
+    features.forEach(System.out::println);
 
     SystemRoleCategory category = roleCategoryRepository.findOne(systemRoleCategory.getId());
     logger.info("Hello, " + category.getName());
